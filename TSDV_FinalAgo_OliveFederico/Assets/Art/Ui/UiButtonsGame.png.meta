@@ -1,0 +1,2540 @@
+fileFormatVersion: 2
+guid: 8b851c9c60d22ca46886b5501070719c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1380325239189948492
+    second: UiButtonsGame_0
+  - first:
+      213: 4323123366795932705
+    second: UiButtonsGame_1
+  - first:
+      213: 8425175917493064443
+    second: UiButtonsGame_2
+  - first:
+      213: 5548953550614408853
+    second: UiButtonsGame_3
+  - first:
+      213: 4162986673199266422
+    second: UiButtonsGame_4
+  - first:
+      213: 7272100700213507737
+    second: UiButtonsGame_5
+  - first:
+      213: -2469570258440193105
+    second: UiButtonsGame_6
+  - first:
+      213: -2718900787430450175
+    second: UiButtonsGame_7
+  - first:
+      213: -6423094779888364506
+    second: UiButtonsGame_8
+  - first:
+      213: -5195778764884319080
+    second: UiButtonsGame_9
+  - first:
+      213: 5234533282309455771
+    second: UiButtonsGame_10
+  - first:
+      213: 6207408386307985016
+    second: UiButtonsGame_11
+  - first:
+      213: 2490698173736374231
+    second: UiButtonsGame_12
+  - first:
+      213: -5020548924985371503
+    second: UiButtonsGame_13
+  - first:
+      213: 7581812017909515956
+    second: UiButtonsGame_14
+  - first:
+      213: -743640855385034506
+    second: UiButtonsGame_15
+  - first:
+      213: 5089344810397520054
+    second: UiButtonsGame_16
+  - first:
+      213: 8172861047786926814
+    second: UiButtonsGame_17
+  - first:
+      213: 3445635022815354435
+    second: UiButtonsGame_18
+  - first:
+      213: -7747130019380954940
+    second: UiButtonsGame_19
+  - first:
+      213: -1210826774221956436
+    second: UiButtonsGame_20
+  - first:
+      213: -6094433098534604904
+    second: UiButtonsGame_21
+  - first:
+      213: 7202478703063656602
+    second: UiButtonsGame_22
+  - first:
+      213: 6834602874067873306
+    second: UiButtonsGame_23
+  - first:
+      213: 9167016326520915995
+    second: UiButtonsGame_24
+  - first:
+      213: -3395285259036567209
+    second: UiButtonsGame_25
+  - first:
+      213: -8683320933295262528
+    second: UiButtonsGame_26
+  - first:
+      213: 2706175032296731505
+    second: UiButtonsGame_27
+  - first:
+      213: 6388385108783015952
+    second: UiButtonsGame_28
+  - first:
+      213: 3324001687379356349
+    second: UiButtonsGame_29
+  - first:
+      213: 1846032229971063376
+    second: UiButtonsGame_30
+  - first:
+      213: 2193036328607350338
+    second: UiButtonsGame_31
+  - first:
+      213: -4282292606502590391
+    second: UiButtonsGame_32
+  - first:
+      213: -1624558267707263318
+    second: UiButtonsGame_33
+  - first:
+      213: -2895939429168095000
+    second: UiButtonsGame_34
+  - first:
+      213: 6352305569946053118
+    second: UiButtonsGame_35
+  - first:
+      213: 2124312948665433081
+    second: UiButtonsGame_36
+  - first:
+      213: -5029353946703449882
+    second: UiButtonsGame_37
+  - first:
+      213: -109742137046579640
+    second: UiButtonsGame_38
+  - first:
+      213: 3426822115999083432
+    second: UiButtonsGame_39
+  - first:
+      213: 1304360164968490113
+    second: UiButtonsGame_40
+  - first:
+      213: 1933279831561803424
+    second: UiButtonsGame_41
+  - first:
+      213: -6769281501431917940
+    second: UiButtonsGame_42
+  - first:
+      213: -5100035719259612054
+    second: UiButtonsGame_43
+  - first:
+      213: -9089172191025861581
+    second: UiButtonsGame_44
+  - first:
+      213: 3626393344290093238
+    second: UiButtonsGame_45
+  - first:
+      213: 8474610534159409913
+    second: UiButtonsGame_46
+  - first:
+      213: 8834209536438494412
+    second: UiButtonsGame_47
+  - first:
+      213: 4109033164219654837
+    second: UiButtonsGame_48
+  - first:
+      213: -8855088993498857793
+    second: UiButtonsGame_49
+  - first:
+      213: 3085884741649884932
+    second: UiButtonsGame_50
+  - first:
+      213: -696708829999839109
+    second: UiButtonsGame_51
+  - first:
+      213: 5652687847016762169
+    second: UiButtonsGame_52
+  - first:
+      213: -2921286345672878122
+    second: UiButtonsGame_53
+  - first:
+      213: 407284745666983510
+    second: UiButtonsGame_54
+  - first:
+      213: -40150869064980313
+    second: UiButtonsGame_55
+  - first:
+      213: -5029666724040834707
+    second: UiButtonsGame_56
+  - first:
+      213: -1777645357061202700
+    second: UiButtonsGame_57
+  - first:
+      213: 5934119188100117970
+    second: UiButtonsGame_58
+  - first:
+      213: -1929252240845186088
+    second: UiButtonsGame_59
+  - first:
+      213: -1428460687845849811
+    second: UiButtonsGame_60
+  - first:
+      213: -2201721921288866141
+    second: UiButtonsGame_61
+  - first:
+      213: 5246482760083207802
+    second: UiButtonsGame_62
+  - first:
+      213: -6026743968583951855
+    second: UiButtonsGame_63
+  - first:
+      213: 8722002529668040647
+    second: UiButtonsGame_64
+  - first:
+      213: -4639804596705014537
+    second: UiButtonsGame_65
+  - first:
+      213: 6887183885694070935
+    second: UiButtonsGame_66
+  - first:
+      213: 1853703607497931803
+    second: UiButtonsGame_67
+  - first:
+      213: -4204713125351497194
+    second: UiButtonsGame_68
+  - first:
+      213: 565830541607526574
+    second: UiButtonsGame_69
+  - first:
+      213: -3880713680185607523
+    second: UiButtonsGame_70
+  - first:
+      213: -5466978447838448433
+    second: UiButtonsGame_71
+  - first:
+      213: 4350180290362197397
+    second: UiButtonsGame_72
+  - first:
+      213: -8611816676227522057
+    second: UiButtonsGame_73
+  - first:
+      213: 3206331213654815565
+    second: UiButtonsGame_74
+  - first:
+      213: -3380360869500158578
+    second: UiButtonsGame_75
+  - first:
+      213: -6120608148817901469
+    second: UiButtonsGame_76
+  - first:
+      213: -6048185025353063437
+    second: UiButtonsGame_77
+  - first:
+      213: -3546477110330395756
+    second: UiButtonsGame_78
+  - first:
+      213: -9121509261898445064
+    second: UiButtonsGame_79
+  - first:
+      213: -5674012046503309367
+    second: UiButtonsGame_80
+  - first:
+      213: 3171694346746052847
+    second: UiButtonsGame_81
+  - first:
+      213: 5407336850451588121
+    second: UiButtonsGame_82
+  - first:
+      213: 7433573167586894615
+    second: UiButtonsGame_83
+  - first:
+      213: 124173294727744513
+    second: UiButtonsGame_84
+  - first:
+      213: 2075803001629117481
+    second: UiButtonsGame_85
+  - first:
+      213: 2071780377942381592
+    second: UiButtonsGame_86
+  - first:
+      213: 5332113197968773425
+    second: UiButtonsGame_87
+  - first:
+      213: 6559131500804306058
+    second: UiButtonsGame_88
+  - first:
+      213: 5692928413797364777
+    second: UiButtonsGame_89
+  - first:
+      213: 2041514845129183221
+    second: UiButtonsGame_90
+  - first:
+      213: 5942789978044761308
+    second: UiButtonsGame_91
+  - first:
+      213: -8575409555516392171
+    second: UiButtonsGame_92
+  - first:
+      213: 1539362599619517937
+    second: UiButtonsGame_93
+  - first:
+      213: -4493349246954905527
+    second: UiButtonsGame_94
+  - first:
+      213: 4071608595462109581
+    second: UiButtonsGame_95
+  - first:
+      213: 5299921112652506253
+    second: UiButtonsGame_96
+  - first:
+      213: 5486160822909574569
+    second: UiButtonsGame_97
+  - first:
+      213: -2491770491706636189
+    second: UiButtonsGame_98
+  - first:
+      213: -7075803006739317707
+    second: UiButtonsGame_99
+  - first:
+      213: -5235434746940645628
+    second: UiButtonsGame_100
+  - first:
+      213: 5601631696005301397
+    second: UiButtonsGame_101
+  - first:
+      213: 813272761517849852
+    second: UiButtonsGame_102
+  - first:
+      213: -3202925899578987089
+    second: UiButtonsGame_103
+  - first:
+      213: -7222739338161450682
+    second: UiButtonsGame_104
+  - first:
+      213: 5083030536665093568
+    second: UiButtonsGame_105
+  - first:
+      213: 4974458317823450821
+    second: UiButtonsGame_106
+  - first:
+      213: -4512318439575948434
+    second: UiButtonsGame_107
+  - first:
+      213: -6820667939875387543
+    second: UiButtonsGame_108
+  - first:
+      213: -3649727172100725513
+    second: UiButtonsGame_109
+  - first:
+      213: -8205921921774088397
+    second: UiButtonsGame_110
+  - first:
+      213: 5882455475243606939
+    second: UiButtonsGame_111
+  - first:
+      213: 3618378416372647611
+    second: UiButtonsGame_112
+  - first:
+      213: -5654660138558588983
+    second: UiButtonsGame_113
+  - first:
+      213: -8301932917784493684
+    second: UiButtonsGame_114
+  - first:
+      213: 2888453270483518544
+    second: UiButtonsGame_115
+  - first:
+      213: 2094726081798785964
+    second: UiButtonsGame_116
+  - first:
+      213: 7715545461554818465
+    second: UiButtonsGame_117
+  - first:
+      213: -5334523163496146861
+    second: UiButtonsGame_118
+  - first:
+      213: -5609551945669078485
+    second: UiButtonsGame_119
+  - first:
+      213: -2402979953491126793
+    second: UiButtonsGame_120
+  - first:
+      213: 9217174650954187083
+    second: UiButtonsGame_121
+  - first:
+      213: -6907468055229954549
+    second: UiButtonsGame_122
+  - first:
+      213: -886317169424164785
+    second: UiButtonsGame_123
+  - first:
+      213: -3903020028051701103
+    second: UiButtonsGame_124
+  - first:
+      213: 3235742458625036049
+    second: UiButtonsGame_125
+  - first:
+      213: 851489068062831209
+    second: UiButtonsGame_126
+  - first:
+      213: -8697789902185354286
+    second: UiButtonsGame_127
+  - first:
+      213: -4103592268724020246
+    second: UiButtonsGame_128
+  - first:
+      213: -7562998892733952697
+    second: UiButtonsGame_129
+  - first:
+      213: 1194887070864195751
+    second: UiButtonsGame_130
+  - first:
+      213: -6295353768804083714
+    second: UiButtonsGame_131
+  - first:
+      213: 2266845484513370835
+    second: UiButtonsGame_132
+  - first:
+      213: -3890987146523343821
+    second: UiButtonsGame_133
+  - first:
+      213: -9188476412425067433
+    second: UiButtonsGame_134
+  - first:
+      213: 1706589572690021886
+    second: UiButtonsGame_135
+  - first:
+      213: 5208529059875518300
+    second: UiButtonsGame_136
+  - first:
+      213: 3100323443071035223
+    second: UiButtonsGame_137
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UiButtonsGame_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1217
+        width: 97
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c484c64ed76e72310800000000000000
+      internalID: 1380325239189948492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_1
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1217
+        width: 97
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 124ff061cc1defb30800000000000000
+      internalID: 4323123366795932705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_2
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1217
+        width: 97
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf29954cbdc3ce470800000000000000
+      internalID: 8425175917493064443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_3
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1217
+        width: 98
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ea38bcad7d10d40800000000000000
+      internalID: 5548953550614408853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_4
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1172
+        width: 97
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a3ab4a256e5c930800000000000000
+      internalID: 4162986673199266422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_5
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1172
+        width: 97
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996781fbe01bbe460800000000000000
+      internalID: 7272100700213507737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_6
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1172
+        width: 97
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab7dcd2fe25abdd0800000000000000
+      internalID: -2469570258440193105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_7
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1172
+        width: 98
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c9da1a326844ad0800000000000000
+      internalID: -2718900787430450175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_8
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1120
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 624961624559cd6a0800000000000000
+      internalID: -6423094779888364506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_9
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1120
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8946d83edb2e4e7b0800000000000000
+      internalID: -5195778764884319080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_10
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1120
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fb309594cc4a840800000000000000
+      internalID: 5234533282309455771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_11
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1120
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e0ba10a05252650800000000000000
+      internalID: 6207408386307985016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_12
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 1063
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df4540faccb09220800000000000000
+      internalID: 2490698173736374231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_13
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1063
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19417cc4a5d635ab0800000000000000
+      internalID: -5020548924985371503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_15
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1063
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0be4ef49e0ea5f0800000000000000
+      internalID: -743640855385034506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_16
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1063
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0d83bf32cf0a640800000000000000
+      internalID: 5089344810397520054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_18
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 1014
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34edd882cca51df20800000000000000
+      internalID: 3445635022815354435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_19
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1014
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c8780e1b4aac7490800000000000000
+      internalID: -7747130019380954940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_21
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1014
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f2676f2693c6ba0800000000000000
+      internalID: -6094433098534604904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_22
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1014
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98ec66583854f360800000000000000
+      internalID: 7202478703063656602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_24
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 965
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b184c70b7c8c73f70800000000000000
+      internalID: 9167016326520915995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_25
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 965
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7595100cb0681e0d0800000000000000
+      internalID: -3395285259036567209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_27
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 965
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173f31c9ad34e8520800000000000000
+      internalID: 2706175032296731505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_28
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 965
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0182869c86a18a850800000000000000
+      internalID: 6388385108783015952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_30
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 916
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 052f85f488c6e9910800000000000000
+      internalID: 1846032229971063376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_31
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 916
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24efa22fbea3f6e10800000000000000
+      internalID: 2193036328607350338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_33
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 916
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa67260ecd86479e0800000000000000
+      internalID: -1624558267707263318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_34
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 916
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e06369be6e8fc7d0800000000000000
+      internalID: -2895939429168095000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_36
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 867
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb37f82f531b7d10800000000000000
+      internalID: 2124312948665433081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_37
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 867
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0380d6b35243ab0800000000000000
+      internalID: -5029353946703449882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_39
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 867
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8abe394fe848e8f20800000000000000
+      internalID: 3426822115999083432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_40
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 867
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184ed14c8a40a1210800000000000000
+      internalID: 1304360164968490113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_42
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 818
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c821782f65eae02a0800000000000000
+      internalID: -6769281501431917940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_43
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 818
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c1ab3d8880939b0800000000000000
+      internalID: -5100035719259612054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_45
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 818
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8704e7889835230800000000000000
+      internalID: 3626393344290093238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_46
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 818
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f2ea52616ddb9570800000000000000
+      internalID: 8474610534159409913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_48
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 769
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2ac9b64e7360930800000000000000
+      internalID: 4109033164219654837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_49
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 769
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe77080a776c1580800000000000000
+      internalID: -8855088993498857793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_51
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 769
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b784bfba20bc456f0800000000000000
+      internalID: -696708829999839109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_52
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 769
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b0a9bc5a1627e40800000000000000
+      internalID: 5652687847016762169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_54
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 720
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6567aeb7157f6a500800000000000000
+      internalID: 407284745666983510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_55
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 720
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a865ff4ffa517ff0800000000000000
+      internalID: -40150869064980313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_57
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 720
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc9eb357f88457e0800000000000000
+      internalID: -1777645357061202700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_58
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 720
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d5798516f93a5250800000000000000
+      internalID: 5934119188100117970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_60
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 671
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25865d92961d2ce0800000000000000
+      internalID: -1428460687845849811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_61
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 671
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6f26be399e171e0800000000000000
+      internalID: -2201721921288866141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_63
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 671
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a5358aa44bc5ca0800000000000000
+      internalID: -6026743968583951855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_64
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 671
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c70ceee617ca0970800000000000000
+      internalID: 8722002529668040647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_66
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 622
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790f6911141349f50800000000000000
+      internalID: 6887183885694070935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_67
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 622
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c36c31c9da9b910800000000000000
+      internalID: 1853703607497931803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_69
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 622
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0659331eb3ad700800000000000000
+      internalID: 565830541607526574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_70
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 622
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ab981087fe42ac0800000000000000
+      internalID: -3880713680185607523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_72
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 573
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595c1f30de1fe5c30800000000000000
+      internalID: 4350180290362197397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_73
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 573
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f16cae3c5eac7880800000000000000
+      internalID: -8611816676227522057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_75
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 573
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8dffc8f2bb8611d0800000000000000
+      internalID: -3380360869500158578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_76
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 573
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3680958215b3f0ba0800000000000000
+      internalID: -6120608148817901469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_78
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 524
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 493f3b2bbd168cec0800000000000000
+      internalID: -3546477110330395756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_79
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 524
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe8b1577a3e96180800000000000000
+      internalID: -9121509261898445064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_81
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 524
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0c9e9343f140c20800000000000000
+      internalID: 3171694346746052847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_82
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 524
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 914eb085738ba0b40800000000000000
+      internalID: 5407336850451588121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_84
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 475
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c46d224f629b100800000000000000
+      internalID: 124173294727744513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_85
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 475
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c0bc7f4dbbecc10800000000000000
+      internalID: 2075803001629117481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_87
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 475
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131d91be3b87ff940800000000000000
+      internalID: 5332113197968773425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_88
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 475
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84f3842957b60b50800000000000000
+      internalID: 6559131500804306058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_90
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 426
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff8c9b6feae45c10800000000000000
+      internalID: 2041514845129183221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_91
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 426
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd40c10bff7097250800000000000000
+      internalID: 5942789978044761308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_93
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 426
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdd7d2e02aec5510800000000000000
+      internalID: 1539362599619517937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_94
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 426
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 940eb7baaaa64a1c0800000000000000
+      internalID: -4493349246954905527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_96
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 378
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84ee39fb2a1d8940800000000000000
+      internalID: 5299921112652506253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_97
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 378
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad90369332c22c40800000000000000
+      internalID: 5486160822909574569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_99
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 378
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c79a297a2bdcd90800000000000000
+      internalID: -7075803006739317707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_100
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 378
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f9ddf06dff757b0800000000000000
+      internalID: -5235434746940645628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_102
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 329
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfcb5c78443594b00800000000000000
+      internalID: 813272761517849852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_103
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 329
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad22b93ddbec83d0800000000000000
+      internalID: -3202925899578987089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_105
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 329
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5d260975d8a8640800000000000000
+      internalID: 5083030536665093568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_106
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 329
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce9ad7fb73d80540800000000000000
+      internalID: 4974458317823450821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_108
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 280
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96705d865ae1851a0800000000000000
+      internalID: -6820667939875387543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_109
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 280
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f468db5970995dc0800000000000000
+      internalID: -3649727172100725513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_111
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 280
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9362f0961ea2a150800000000000000
+      internalID: 5882455475243606939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_112
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 280
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb605daafff073230800000000000000
+      internalID: 3618378416372647611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_114
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 231
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81455e2ffb99cc80800000000000000
+      internalID: -8301932917784493684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_115
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 231
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0544c7122f8d51820800000000000000
+      internalID: 2888453270483518544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_117
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 231
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad2a54f7bf131b60800000000000000
+      internalID: 7715545461554818465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_118
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 231
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35818b14277f7f5b0800000000000000
+      internalID: -5334523163496146861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_120
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 182
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5d6cdb676e6aed0800000000000000
+      internalID: -2402979953491126793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_121
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 182
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b410cd6a28bf9ef70800000000000000
+      internalID: 9217174650954187083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_122
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 182
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0609aea66eb320a0800000000000000
+      internalID: -6907468055229954549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_126
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 133
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9627308cbc811db00800000000000000
+      internalID: 851489068062831209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_127
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 133
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db2345ba2e3b4780800000000000000
+      internalID: -8697789902185354286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_128
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 133
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb5aa7c29c1d07c0800000000000000
+      internalID: -4103592268724020246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_132
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 84
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d22e1935f3757f10800000000000000
+      internalID: 2266845484513370835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_133
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 84
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3348dd93ecf600ac0800000000000000
+      internalID: -3890987146523343821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_134
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 84
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7542952b269fb7080800000000000000
+      internalID: -9188476412425067433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsGame_137
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 34
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757a019cebf860b20800000000000000
+      internalID: 3100323443071035223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 65ad8ed1152d1144ab0978ab5cb7571c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
