@@ -1181,6 +1181,9 @@ MonoBehaviour:
 
     Artists:
 
+    "9mm bullet" (https://skfb.ly/6SSoV)
+    by lluismartinezborrell is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
     https://free3d.com/3d-model/t-90a-russian-tank-47395.html
 
     https://craftpix.net/freebies/free-2d-battle-tank-game-assets/'
@@ -1210,7 +1213,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.4
+  m_fontSize: 34.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
