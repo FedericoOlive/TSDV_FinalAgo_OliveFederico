@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
         public GameObject tank;
         public GameObject cannon;
         public GameObject firePoint;
+        public GameObject PfBullet;
     }
     [Serializable] public class Attributes
     {
@@ -19,37 +20,32 @@ public class Player : MonoBehaviour
     [SerializeField] private Tank tank;
     [SerializeField] private Attributes attributes;
     
-
-    // Start is called before the first frame update
     void Start()
     {
         
     }
-
-    // Update is called once per frame
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            
+        }
+    }
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.Translate(Vector3.forward * attributes.speedTankMovement);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(Vector3.forward * (-attributes.speedTankMovement / 2));
-        }
+        float ver = Input.GetAxisRaw("Vertical");
+        transform.Translate(Vector3.forward * (attributes.speedTankMovement * ver));
+        transform.Translate(Vector3.forward * (-attributes.speedTankMovement / 2 * ver));
+
         if (Input.GetKey(KeyCode.A))
         {
-
+            transform.Rotate(transform.up, -attributes.speedTankRotate);
         }
         if (Input.GetKey(KeyCode.D))
         {
-
+            transform.Rotate(transform.up, attributes.speedTankRotate);
         }
         if (Input.GetKey(KeyCode.Space))
-        {
-
-        }
-        if (Input.GetMouseButtonDown(0))
         {
 
         }
