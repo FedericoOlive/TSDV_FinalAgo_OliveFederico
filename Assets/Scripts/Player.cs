@@ -1,11 +1,6 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections;
-using System.Numerics;
-using UnityEngine.Assertions.Must;
-using Quaternion = UnityEngine.Quaternion;
-using Vector2 = UnityEngine.Vector2;
-using Vector3 = UnityEngine.Vector3;
 
 public class Player : MonoBehaviour
 {
@@ -23,7 +18,11 @@ public class Player : MonoBehaviour
         public float rotateTank;
         public float gravityTankRotate;
         public float rotateCannon;
+        public float bulletForce;
+        public int initialBullet;
     }
+    [SerializeField] private Tank tank;
+    [SerializeField] private Settings settings;
 
     public float tankSeparateTerrain = 0.5f;
     public float rateFire;
@@ -31,14 +30,10 @@ public class Player : MonoBehaviour
     private bool shooting;
     private bool reloaded;
 
-    public float offsetRangeShoot;
-    public Vector3 pointToShoot;
-    [SerializeField] private Tank tank;
-    [SerializeField] private Settings settings;
-
     void Start()
     {
-
+        reloaded = true;
+        rateFireTime = rateFire;
     }
 
     private void Update()
@@ -64,6 +59,7 @@ public class Player : MonoBehaviour
             reloaded = true;
             if (Input.GetMouseButtonDown(0) && !shooting && reloaded)
             {
+                rateFireTime = 0;
                 reloaded = false;
                 shooting = true;
                 Aim();
@@ -90,8 +86,9 @@ public class Player : MonoBehaviour
         rotateDestiny = Quaternion.Euler(posX, rotateDestiny.eulerAngles.y, 0);
         Debug.Log("Clamped: " + rotateDestiny);
 
-        while (cannonT.rotation != rotateDestiny)                                                        
+        while (cannonT.rotation != rotateDestiny)
         {
+            cannonT.rotation = Quaternion.Euler(cannonT.eulerAngles.x, cannonT.eulerAngles.y, 0);// testear, sino sacar del while (abajo)
             rotateDestiny = Quaternion.LookRotation(point - cannonT.position, cannonT.up);
             cannonT.rotation = Quaternion.RotateTowards(cannonT.rotation, rotateDestiny, settings.rotateCannon * Time.deltaTime);
             yield return null;
@@ -107,8 +104,8 @@ public class Player : MonoBehaviour
             bulletGroup = GameObject.Find("BulletGroup_Ref").transform;
             Debug.LogWarning("bulletGroup no estaba asignado", gameObject);
         }
-
-        GameObject bullet = Instantiate(tank.PfBullet, tank.firePoint.transform.position, Quaternion.identity, bulletGroup);
+        GameObject bullet = Instantiate(tank.PfBullet, tank.firePoint.transform.position, tank.cannon.transform.rotation, bulletGroup);
+        bullet.GetComponent<Rigidbody>().AddForce(bullet.transform.forward * settings.bulletForce, ForceMode.Impulse);
     }
     void Movement()
     {

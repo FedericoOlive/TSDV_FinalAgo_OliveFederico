@@ -1186,6 +1186,14 @@ MonoBehaviour:
 
     https://free3d.com/3d-model/t-90a-russian-tank-47395.html
 
+    "LootBox_Low2_SketchFab"
+    (https://skfb.ly/6WKKI) by MattDonlan is licensed under Creative Commons Attribution
+    (http://creativecommons.org/licenses/by/4.0/).
+
+    "Low Poly Wooden Barrel"
+    (https://skfb.ly/oo8vI) by Saqib Ali is licensed under Creative Commons Attribution
+    (http://creativecommons.org/licenses/by/4.0/).
+
     https://craftpix.net/freebies/free-2d-battle-tank-game-assets/'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1213,7 +1221,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34.05
+  m_fontSize: 25.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
