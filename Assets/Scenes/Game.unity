@@ -1114,9 +1114,9 @@ MonoBehaviour:
   - {fileID: 5712461441316468439}
   - {fileID: 5712461441316468439}
   cameraMode: 2
-  angle: 20
+  angle: 14
   distance: 40
-  height: 0
+  height: 11
 --- !u!1 &982508060
 GameObject:
   m_ObjectHideFlags: 0

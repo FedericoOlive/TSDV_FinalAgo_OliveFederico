@@ -38,8 +38,6 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawRay(ray.origin, ray.direction * 1000, Color.black);
         TryShoot();
     }
     void FixedUpdate()
@@ -95,10 +93,10 @@ public class Player : MonoBehaviour
             cannonT.rotation = Quaternion.RotateTowards(cannonT.rotation, rotateDestiny, settings.rotateCannon * Time.deltaTime);
             yield return null;
         }
-        Shoot();
+        Shoot(point);
     }
 
-    void Shoot()
+    void Shoot(Vector3 point)
     {
         shooting = false;
         if (!bulletGroup)
@@ -107,7 +105,8 @@ public class Player : MonoBehaviour
             Debug.LogWarning("bulletGroup no estaba asignado", gameObject);
         }
         GameObject bullet = Instantiate(tank.PfBullet, tank.firePoint.transform.position, tank.cannon.transform.rotation, bulletGroup);
-        bullet.GetComponent<Rigidbody>().AddForce(bullet.transform.forward * settings.bulletForce, ForceMode.Impulse);
+        Vector3 direction = point - bullet.transform.position;
+        bullet.GetComponent<Rigidbody>().AddForce(direction.normalized * settings.bulletForce, ForceMode.Impulse);
     }
     void Movement()
     {
