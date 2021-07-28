@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7213972974446860093}
   - component: {fileID: 6031152951683405976}
   - component: {fileID: 8382890979185896530}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WoodenBarrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

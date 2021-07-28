@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     }
     [SerializeField] private Tank tank;
     [SerializeField] private Settings settings;
-
+    public LayerMask objetivesLayerMask;
     public float tankSeparateTerrain = 0.5f;
     public float rateFire;
     private float rateFireTime;
@@ -38,6 +38,8 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Debug.DrawRay(ray.origin, ray.direction * 1000, Color.black);
         TryShoot();
     }
     void FixedUpdate()
@@ -69,10 +71,10 @@ public class Player : MonoBehaviour
     private void Aim()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawRay(ray.origin, ray.direction * 100, Color.black);
+        Debug.DrawRay(ray.origin, ray.direction * 1000, Color.black);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit, 5000, objetivesLayerMask))
         {
             StartCoroutine(Shooting(hit.point));
         }

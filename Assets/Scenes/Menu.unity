@@ -1186,6 +1186,10 @@ MonoBehaviour:
 
     https://free3d.com/3d-model/t-90a-russian-tank-47395.html
 
+    "Gas
+    Pump" (https://skfb.ly/6Z6xC) by bosquet is licensed under Creative Commons Attribution
+    (http://creativecommons.org/licenses/by/4.0/).
+
     "LootBox_Low2_SketchFab"
     (https://skfb.ly/6WKKI) by MattDonlan is licensed under Creative Commons Attribution
     (http://creativecommons.org/licenses/by/4.0/).
@@ -1221,7 +1225,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.25
+  m_fontSize: 24.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
