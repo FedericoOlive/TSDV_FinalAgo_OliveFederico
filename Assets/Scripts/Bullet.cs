@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (LayerEquals(layersImpacts, other.gameObject.layer))
+        if (ConstantsFunctions.LayerEquals(layersImpacts, other.gameObject.layer))
         {
             Debug.Log("La bala choca contra: "+ other.gameObject.name);
             Destroy(gameObject);
@@ -27,9 +27,5 @@ public class Bullet : MonoBehaviour
 
             objetive.TakeDamage(damage);
         }
-    }
-    bool LayerEquals(LayerMask mask, int layer)
-    {
-        return mask == (mask | (1 << layer));
     }
 }

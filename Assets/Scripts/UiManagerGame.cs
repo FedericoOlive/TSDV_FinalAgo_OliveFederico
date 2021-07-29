@@ -32,6 +32,7 @@ public class UiManagerGame : MonoBehaviour
     
     void Start()
     {
+        GameManager.Get().updateScore += UpdateScore;
         foreach (CanvasGroup canvas in canvasGroup)
         {
             canvas.interactable = false;
@@ -50,7 +51,7 @@ public class UiManagerGame : MonoBehaviour
     }
     public void UpdateScore()
     {
-
+        ui.score.text = GameManager.Get().score.ToString();
     }
     public void UpdateTime()
     {
@@ -81,7 +82,7 @@ public class UiManagerGame : MonoBehaviour
         ui.bulletRecharge.fillAmount = 0;
         while (ui.bulletRecharge.fillAmount < 0.95f)
         {
-            Debug.Log("Recargando: " + ui.bulletRecharge.fillAmount);
+            //Debug.Log("Recargando: " + ui.bulletRecharge.fillAmount);
             ui.bulletRecharge.fillAmount = player.GetRateFireTime() / player.rateFire;
             yield return null;
         }
@@ -115,7 +116,6 @@ public class UiManagerGame : MonoBehaviour
         on.interactable = true;
         onTime = 0;
     }
-
     public void GoToScene(string scene)
     {
         Time.timeScale = 1;

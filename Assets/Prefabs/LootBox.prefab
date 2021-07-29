@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  rewardScore: 10
+  life: 1
 --- !u!65 &6842958268431360977
 BoxCollider:
   m_ObjectHideFlags: 0

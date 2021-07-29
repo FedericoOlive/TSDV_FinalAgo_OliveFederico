@@ -4,34 +4,47 @@ using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviourSingleton<GameManager>
 {
-    public enum RewardsType { LootBox, Barrel };
-    [Serializable] public class Objects
+    public Action updateScore;
+    public enum RewardsType
+    {
+        LootBox,
+        Barrel,
+        EnemyTurret
+    };
+
+    [Serializable]
+    public class Objects
     {
         public GameObject pfBarrel;
         public GameObject pfLootBox;
         public GameObject spawnBarrel;
         public GameObject spawnLootBox;
         public Transform group;
+        
     }
+
     [SerializeField] public Objects objects;
     const float barrelOffset = 2.174f;
     const float LootBoxOffset = 1.58612f;
     public int initialBoxes = 10;
     public int initialBarrel = 10;
-    public int initialBullets= 10;
+    public int initialBullets = 10;
     public int remainingBoxes = 10;
     public int remainingBarrel = 10;
     public float maxGameTime = 120;
     public float gameTime;
+    public int score;
 
     void Start()
     {
+        score = 0;
         Bounds limits = objects.spawnBarrel.GetComponent<BoxCollider>().bounds;
         for (int i = 0; i < initialBarrel; i++)
         {
             GameObject barrel = Instantiate(objects.pfBarrel, RandomPosition(limits), Random.rotation, objects.group);
             barrel.transform.rotation = SetInclination(barrel.transform);
             barrel.transform.position = SetHeight(barrel, barrelOffset);
+            barrel.GetComponent<ObjectsRewards>().giveReward += AddReward;
         }
 
         limits = objects.spawnLootBox.GetComponent<BoxCollider>().bounds;
@@ -40,13 +53,20 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
             GameObject boxes = Instantiate(objects.pfLootBox, RandomPosition(limits), Random.rotation, objects.group);
             boxes.transform.rotation = SetInclination(boxes.transform);
             boxes.transform.position = SetHeight(boxes, LootBoxOffset);
+            boxes.GetComponent<ObjectsRewards>().giveReward += AddReward;
         }
     }
+
     void Update()
     {
         gameTime += Time.deltaTime;
     }
 
+    void AddReward(int reward)
+    {
+        score += reward;
+        updateScore?.Invoke();
+    }
 
     Vector3 SetHeight(GameObject go, float offset)
     {
@@ -54,6 +74,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         pos.y = Terrain.activeTerrain.SampleHeight(pos) + offset;
         return pos;
     }
+
     Vector3 RandomPosition(Bounds bounds)
     {
         return new Vector3(
@@ -62,6 +83,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
             Random.Range(bounds.min.z, bounds.max.z)
         );
     }
+
     Quaternion SetInclination(Transform transform)
     {
         RaycastHit hit;
@@ -70,6 +92,14 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
             Quaternion qTo = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
             return qTo;
         }
+
         return Quaternion.identity;
+    }
+}
+public class ConstantsFunctions
+{
+    public static bool LayerEquals(LayerMask mask, int layer)
+    {
+        return mask == (mask | (1 << layer));
     }
 }

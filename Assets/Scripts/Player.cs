@@ -7,6 +7,7 @@ public class Player : MonoBehaviour, IDamageable
 {
     public Action Shooted;
     public Action Reloaded;
+    public Action Die;
     public Transform bulletGroup;
     [Serializable] public class Tank
     {
@@ -200,7 +201,8 @@ public class Player : MonoBehaviour, IDamageable
         settings.life -= damage;
         if (settings.life <= 0)
         {
-            // Evento Morir.
+            Die?.Invoke();
+            // todo Evento Morir.
         }
     }
 }
