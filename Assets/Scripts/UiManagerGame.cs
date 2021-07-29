@@ -1,9 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
-using System.Threading;
 using TMPro;
 using UnityEngine.UI;
 
@@ -42,7 +40,7 @@ public class UiManagerGame : MonoBehaviour
         canvasGroup[(int) CanvasGroups.Game].interactable = true;
         canvasGroup[(int) CanvasGroups.Game].blocksRaycasts = true;
         canvasGroup[(int)CanvasGroups.Game].alpha = 1;
-        player.Shooted += ShootedBullet;
+        player.OnShooted += ShootedBullet;
     }
     void Update()
     {

@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections;
-using Unity.Mathematics;
 
 public class Player : MonoBehaviour, IDamageable
 {
-    public Action Shooted;
-    public Action Reloaded;
-    public Action Die;
+    public Action OnShooted;
+    public Action OnReloaded;
+    public Action OnDie;
     public Transform bulletGroup;
     [Serializable] public class Tank
     {
@@ -87,7 +86,7 @@ public class Player : MonoBehaviour, IDamageable
                     rateFireTime = 0;
                     reloaded = false;
                     shooting = true;
-                    Shooted?.Invoke();
+                    OnShooted?.Invoke();
                     Aim();
                 }
                 else
@@ -195,13 +194,12 @@ public class Player : MonoBehaviour, IDamageable
         newpos.y = Terrain.activeTerrain.SampleHeight(transform.position) + tankSeparateTerrain;
         transform.position = newpos;
     }
-
     public void TakeDamage(int damage)
     {
         settings.life -= damage;
         if (settings.life <= 0)
         {
-            Die?.Invoke();
+            OnDie?.Invoke();
             // todo Evento Morir.
         }
     }

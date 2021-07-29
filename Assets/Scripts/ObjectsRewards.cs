@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectsRewards : MonoBehaviour, IDamageable
@@ -22,9 +20,6 @@ public class ObjectsRewards : MonoBehaviour, IDamageable
                     break;
                 case GameManager.RewardsType.LootBox:
                     Debug.Log("LootBox Destruido.");
-                    break;
-                case GameManager.RewardsType.EnemyTurret:
-                    Debug.Log("EnemyTurret Destruido.");
                     break;
                 default:
                     Debug.LogWarning("Se destruyó fuera del rango (No asignado).");

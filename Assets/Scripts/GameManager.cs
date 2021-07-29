@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     {
         LootBox,
         Barrel,
-        EnemyTurret
     };
 
     [Serializable]
@@ -20,7 +19,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         public GameObject spawnBarrel;
         public GameObject spawnLootBox;
         public Transform group;
-        
+        public EnemyTurret enemyTurret;
     }
 
     [SerializeField] public Objects objects;
