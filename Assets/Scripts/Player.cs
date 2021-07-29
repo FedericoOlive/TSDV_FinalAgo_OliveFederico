@@ -2,7 +2,7 @@
 using System;
 using System.Collections;
 
-public class Player : MonoBehaviour, IDamageable
+public class Player : MonoBehaviour, IDamageable, IRechargeFuel
 {
     public Action OnShooted;
     public Action OnReloaded;
@@ -202,5 +202,10 @@ public class Player : MonoBehaviour, IDamageable
             OnDie?.Invoke();
             // todo Evento Morir.
         }
+    }
+
+    public void RechargeFuel(float value)
+    {
+        fuel += value;
     }
 }
