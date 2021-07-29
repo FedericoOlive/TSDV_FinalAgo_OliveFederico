@@ -12,7 +12,8 @@ public class CameraController : MonoBehaviour
         Global,
         TopDown,
         ThirdPerson,
-        FirstPerson
+        FirstPerson,
+        TopDownNear
     }
 
     public CameraMode cameraMode = CameraMode.ThirdPerson;
@@ -31,23 +32,7 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        if (lastCameraMode != cameraMode)
-        {
-            SetCameraMode();
-        }
-        else if (cameraMode == CameraMode.ThirdPerson || cameraMode == CameraMode.FirstPerson)
-        {
-            switch (cameraMode)
-            {
-                case CameraMode.ThirdPerson:
-                    break;
-                case CameraMode.FirstPerson:
-                    break;
-                default:
-                    break;
-            }
-            UpdateCameraPosition();
-        }
+        UpdateCameraPosition();
     }
 
     void SetCameraMode()
@@ -74,23 +59,29 @@ public class CameraController : MonoBehaviour
 
     void UpdateCameraPosition()
     {
-        if (cameraMode == CameraMode.FirstPerson)
+        switch (cameraMode)
         {
-            transform.position = positions[(int) CameraMode.FirstPerson].position;
-            transform.rotation = positions[(int) CameraMode.FirstPerson].rotation;
-        }
-        else
-        {
-            // Utilizo las configuraciones del usuario:
-            Vector3 target = positions[(int) CameraMode.ThirdPerson].position;
-            target.y += height;
-            positions[(int) CameraMode.ThirdPerson].TransformDirection(target);
-            transform.position = new Vector3(target.x, target.y + angle, target.z - distance);
-            transform.LookAt(target);
+            case CameraMode.FirstPerson:
+            case CameraMode.TopDownNear:
+            case CameraMode.Global:
+            case CameraMode.TopDown:
+                transform.position = positions[(int)cameraMode].position;
+                transform.rotation = positions[(int)cameraMode].rotation;
+                break;
+            case CameraMode.ThirdPerson:
+                // Utilizo las configuraciones del usuario:
+                Vector3 target = positions[(int)CameraMode.ThirdPerson].position;
+                target.y += height;
+                positions[(int)CameraMode.ThirdPerson].TransformDirection(target);
+                transform.position = new Vector3(target.x, target.y + angle, target.z - distance);
+                transform.LookAt(target);
 
-            // Seteo la cámara detras del tanque
-            direction = positions[(int) CameraMode.ThirdPerson].rotation.eulerAngles.y;
-            transform.RotateAround(target, Vector3.up, direction);
+                // Seteo la cámara detras del tanque
+                direction = positions[(int)CameraMode.ThirdPerson].rotation.eulerAngles.y;
+                transform.RotateAround(target, Vector3.up, direction);
+                break;
+            default:
+                break;
         }
     }
 }

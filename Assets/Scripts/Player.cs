@@ -69,7 +69,8 @@ public class Player : MonoBehaviour, IDamageable
     }
     void TryShoot()
     {
-        rateFireTime += Time.deltaTime;
+        if (!shooting)
+            rateFireTime += Time.deltaTime;
         if (rateFireTime > rateFire)
         {
             if (!reloaded)
