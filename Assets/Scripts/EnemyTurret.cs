@@ -76,7 +76,9 @@ public class EnemyTurret : MonoBehaviour, IDamageable
         Vector3 direction = point - bullet.transform.position;
         Debug.DrawRay(point, direction, Color.black, 2.0f);
         bullet.GetComponent<Rigidbody>().AddForce(direction.normalized * settings.bulletForce, ForceMode.Impulse);
-        bullet.GetComponent<Bullet>().damage = settings.damageBullet;
+        Bullet bulletComponent = bullet.GetComponent<Bullet>();
+        bulletComponent.damage = settings.damageBullet;
+        bulletComponent.layersImpacts = damageableLayerMask;
     }
     public void TakeDamage(int damage)
     {

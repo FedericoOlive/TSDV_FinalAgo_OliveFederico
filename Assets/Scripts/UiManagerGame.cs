@@ -36,8 +36,8 @@ public class UiManagerGame : MonoBehaviour
 
     public Player player;
     public CanvasGroup[] canvasGroup;
-    private Color GameOverLoseColor = new Color(200, 60, 60, 170);
-    private Color GameOverWinColor = new Color(60, 200, 60, 170);
+    public Color GameOverLoseColor;
+    public Color GameOverWinColor;
     enum CanvasGroups{ Game, Pause, GameOver }
     private CanvasGroups actualCanvasGroups = CanvasGroups.Game;    // off
     private CanvasGroups nextCanvasGroups = CanvasGroups.Game;      // on
@@ -46,7 +46,6 @@ public class UiManagerGame : MonoBehaviour
     
     void Start()
     {
-        canvasGroup[(int) CanvasGroups.GameOver].GetComponent<Image>().color = player.life > 0 ? GameOverWinColor : GameOverLoseColor;
         GameManager.Get().updateScore += UpdateScore;
         foreach (CanvasGroup canvas in canvasGroup)
         {
@@ -61,6 +60,7 @@ public class UiManagerGame : MonoBehaviour
         GameManager.Get().onGameOver += UpdatePanelGameOver;
         GameManager.Get().onGetBullet += ShootedBullet;
         player.onReceiveDamage += UpdateTankLife;
+        Invoke(nameof(ShootedBullet), 0.1f);
     }
     void Update()
     {
@@ -144,6 +144,7 @@ public class UiManagerGame : MonoBehaviour
     }
     public void UpdatePanelGameOver()
     {
+        canvasGroup[(int) CanvasGroups.GameOver].GetComponent<Image>().color = player.life > 0 ? GameOverWinColor : GameOverLoseColor;
         SwitchPanel((int) CanvasGroups.GameOver);
         float life = player.life;
         uiGameOver.title.text = life > 0 ? "Time Over" : "Game Over";

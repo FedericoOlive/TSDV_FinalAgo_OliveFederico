@@ -97,7 +97,8 @@ MonoBehaviour:
   explodeLayerMask:
     serializedVersion: 2
     m_Bits: 2048
-  type: 1
+  rewardObject: 1
+  rewardType: 0
   rewardScore: 10
   rewardBullet: 0
   life: 1

@@ -39,7 +39,7 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
     private float rateFireTime;
     private bool shooting;
     private bool reloaded;
-    private int bullets;
+    public int bullets;
     public float fuel;
     public float distance;
     public int life = 100;
@@ -162,7 +162,9 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
         GameObject bullet = Instantiate(tank.PfBullet, tank.firePoint.transform.position, tank.cannon.transform.rotation, bulletGroup);
         Vector3 direction = point - bullet.transform.position;
         bullet.GetComponent<Rigidbody>().AddForce(direction.normalized * settings.bulletForce, ForceMode.Impulse);
-        bullet.GetComponent<Bullet>().damage = settings.damageBullet;
+        Bullet bulletComponent = bullet.GetComponent<Bullet>();
+        bulletComponent.damage = settings.damageBullet;
+        bulletComponent.layersImpacts = objetivesLayerMask;
     }
     void Movement()
     {

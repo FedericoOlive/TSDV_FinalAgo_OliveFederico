@@ -1,4 +1,5 @@
 ﻿using System;
+using Unity.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -7,12 +8,8 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     public Action updateScore;
     public Action onGameOver;
     public Action onGetBullet;
-    public enum RewardsType
-    {
-        LootBox,
-        Barrel,
-    };
-
+    public enum RewardsObject { LootBox, Barrel, };
+    public enum RewardType { Score, Bullet, Damage }
     [Serializable]
     public class Objects
     {
@@ -79,41 +76,36 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
             onGameOver?.Invoke();
         }
     }
-    void AddReward(int reward, RewardsType type, bool bullet)
+    void AddReward(int reward, RewardsObject obj, RewardType type)
     {
-        if (bullet)
+        switch (type)
         {
-            score += reward;
-            switch (type)
-            {
-                case RewardsType.Barrel:
-                    barrelsDestroyed++;
-                    break;
-                case RewardsType.LootBox:
-                    boxesDestroyed++;
-                    break;
-                default:
-                    Debug.LogWarning("RewardType excede el límite.");
-                    break;
-            }
-
-            updateScore?.Invoke();
+            case RewardType.Bullet:
+                objects.player.bullets += reward;
+                onGetBullet?.Invoke();
+                break;
+            case RewardType.Damage:
+                objects.player.TakeDamage(reward);
+                break;
+            case RewardType.Score:
+                score += reward;
+                updateScore?.Invoke();
+                break;
+            default:
+                Debug.LogWarning("RewardType excede el límite.");
+                break;
         }
-        else
+        
+        switch (obj)
         {
-            switch (type)
-            {
-                case RewardsType.Barrel:
-                    barrelsDestroyed++;
-                    break;
-                case RewardsType.LootBox:
-                    boxesDestroyed++;
-                    onGetBullet?.Invoke();
-                    break;
-                default:
-                    Debug.LogWarning("RewardType excede el límite.");
-                    break;
-            }
+            case RewardsObject.Barrel:
+                barrelsDestroyed++;
+                break;
+            case RewardsObject.LootBox:
+                boxesDestroyed++;
+                break;
+            default:
+                break;
         }
     }
     Vector3 SetHeight(GameObject go, float offset)

@@ -20,9 +20,9 @@ public class Bullet : MonoBehaviour
     {
         if (!impact)
         {
-            impact = true;
             if (ConstantsFunctions.LayerEquals(layersImpacts, other.gameObject.layer))
             {
+                impact = true;
                 Debug.Log("La bala choca contra: " + other.gameObject.name);
                 Destroy(gameObject);
                 IDamageable objetive = other.gameObject.GetComponent<IDamageable>();
