@@ -2,9 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
+using System.Threading;
+using TMPro;
+using UnityEngine.UI;
 
 public class UiManagerGame : MonoBehaviour
 {
+    [Serializable] public class ObjectsUI
+    {
+        public TextMeshProUGUI score;
+        public TextMeshProUGUI timer;
+        public Image bulletRecharge;
+        public Slider fuel;
+        public Image[] bullets;
+        public Image clockFull;
+    }
+    [SerializeField] private ObjectsUI ui;
+
     public Player player;
     public CanvasGroup[] canvasGroup;
     private Color GameOverLoseColor = new Color(200, 60, 60, 170);
@@ -14,6 +29,7 @@ public class UiManagerGame : MonoBehaviour
     private CanvasGroups nextCanvasGroups = CanvasGroups.Game;      // on
     private float timeTransition = 1f;
     private float onTime;
+    
     void Start()
     {
         foreach (CanvasGroup canvas in canvasGroup)
@@ -25,11 +41,52 @@ public class UiManagerGame : MonoBehaviour
         canvasGroup[(int) CanvasGroups.Game].interactable = true;
         canvasGroup[(int) CanvasGroups.Game].blocksRaycasts = true;
         canvasGroup[(int)CanvasGroups.Game].alpha = 1;
-
+        player.Shooted += ShootedBullet;
     }
     void Update()
     {
-        
+        UpdateTime();
+        UpdateFuel();
+    }
+    public void UpdateScore()
+    {
+
+    }
+    public void UpdateTime()
+    {
+        float maxTime = GameManager.Get().maxGameTime;
+        float onTime = GameManager.Get().gameTime;
+        ui.timer.text = onTime.ToString("F2");
+        ui.clockFull.fillAmount = onTime / maxTime;
+        //Debug.Log(onTime / maxTime);
+    }
+    public void UpdateFuel()
+    {   // Se llama en el update porque llamar a un evento to.do el tiempo mientras se mantenga apretada la tecla me parece demasiado.
+        ui.fuel.value = player.GetFuel() / player.GetMaxFuel();
+        //Debug.Log(player.GetFuel() / player.GetMaxFuel());
+    }
+    public void ShootedBullet()
+    {
+        int bullets = player.GetBullets();
+
+        for (int i = 0; i < ui.bullets.Length; i++)
+        {
+            ui.bullets[i].gameObject.SetActive(i < bullets);
+        }
+
+        StartCoroutine(Reloading());
+    }
+    IEnumerator Reloading()
+    {
+        ui.bulletRecharge.fillAmount = 0;
+        while (ui.bulletRecharge.fillAmount < 0.95f)
+        {
+            Debug.Log("Recargando: " + ui.bulletRecharge.fillAmount);
+            ui.bulletRecharge.fillAmount = player.GetRateFireTime() / player.rateFire;
+            yield return null;
+        }
+
+        ui.bulletRecharge.fillAmount = 1;
     }
     public void Pause(bool on)
     {

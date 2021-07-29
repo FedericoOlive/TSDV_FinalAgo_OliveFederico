@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1815105731483685191}
   - component: {fileID: 3628198472573106039}
   - component: {fileID: 4574793584385328053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LEFT_column001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,6 +79,99 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &2147296100797657408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6114364927273916924}
+  - component: {fileID: 8476625431452913710}
+  - component: {fileID: 4009864792537125625}
+  - component: {fileID: 8170814914064131261}
+  m_Layer: 8
+  m_Name: TriggerRecharge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6114364927273916924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147296100797657408}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.7, y: 21.56, z: 11.48}
+  m_LocalScale: {x: 95.368, y: 52.254974, z: 89.29056}
+  m_Children: []
+  m_Father: {fileID: 7047114217749007317}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8476625431452913710
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147296100797657408}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &4009864792537125625
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147296100797657408}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &8170814914064131261
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147296100797657408}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5089276345537787313
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,7 +183,7 @@ GameObject:
   - component: {fileID: 3979791227267679846}
   - component: {fileID: 8059929247931586150}
   - component: {fileID: 2080162579098210678}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rura001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +262,7 @@ GameObject:
   - component: {fileID: 2874276841611561486}
   - component: {fileID: 7723137514385134632}
   - component: {fileID: 3151578120361058431}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: panel001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7047114217749007317}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GasPump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +353,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7676299423415570799}
-  m_LocalRotation: {x: -0, y: 0.70771044, z: -0, w: 0.7065027}
+  m_LocalRotation: {x: 0, y: 0.70771134, z: 0, w: 0.7065018}
   m_LocalPosition: {x: 293.1, y: 33.53, z: 401.9}
   m_LocalScale: {x: 0.36, y: 0.36, z: 0.36}
   m_Children:
@@ -269,6 +362,7 @@ Transform:
   - {fileID: 1815105731483685191}
   - {fileID: 2874276841611561486}
   - {fileID: 3979791227267679846}
+  - {fileID: 6114364927273916924}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.09801, z: 0}
@@ -283,7 +377,7 @@ GameObject:
   - component: {fileID: 6609083167332549641}
   - component: {fileID: 3884919576065182998}
   - component: {fileID: 3024892799790374526}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +456,7 @@ GameObject:
   - component: {fileID: 8762846571928807908}
   - component: {fileID: 144719913619332889}
   - component: {fileID: 164016858711399776}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GAS_PUMP002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

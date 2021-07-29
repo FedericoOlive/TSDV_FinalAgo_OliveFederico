@@ -4,6 +4,7 @@ using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviourSingleton<GameManager>
 {
+    public enum RewardsType { LootBox, Barrel };
     [Serializable] public class Objects
     {
         public GameObject pfBarrel;
@@ -20,8 +21,8 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     public int initialBullets= 10;
     public int remainingBoxes = 10;
     public int remainingBarrel = 10;
-    public int remainingBullets = 10;
-    private float gameTime;
+    public float maxGameTime = 120;
+    public float gameTime;
 
     void Start()
     {

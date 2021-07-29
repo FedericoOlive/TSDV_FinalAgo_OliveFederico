@@ -1,18 +1,35 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public LayerMask layersImpacts;
+    public int damage;
+
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (LayerEquals(layersImpacts, other.gameObject.layer))
+        {
+            Debug.Log("La bala choca contra: "+ other.gameObject.name);
+            Destroy(gameObject);
+
+            IDamageable objetive = other.gameObject.GetComponent<IDamageable>();
+
+            if (objetive == null) return;
+
+            objetive.TakeDamage(damage);
+        }
+    }
+    bool LayerEquals(LayerMask mask, int layer)
+    {
+        return mask == (mask | (1 << layer));
     }
 }

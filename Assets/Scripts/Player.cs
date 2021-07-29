@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections;
+using Unity.Mathematics;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamageable
 {
+    public Action Shooted;
+    public Action Reloaded;
     public Transform bulletGroup;
     [Serializable] public class Tank
     {
@@ -14,28 +17,45 @@ public class Player : MonoBehaviour
     }
     [Serializable] public class Settings
     {
+        public int life = 100;
         public float speedTankMovement;
         public float rotateTank;
         public float gravityTankRotate;
         public float rotateCannon;
         public float bulletForce;
-        public int initialBullet;
+        public int initialBullets;
+        public int damageBullet;
+        public float fuelConsumptionMovement;
+        public float fuelConsumptionRotation;
+        public float maxFuel;
     }
     [SerializeField] private Tank tank;
     [SerializeField] private Settings settings;
     public LayerMask objetivesLayerMask;
     public float tankSeparateTerrain = 0.5f;
     public float rateFire;
+
     private float rateFireTime;
     private bool shooting;
     private bool reloaded;
+    private int bullets;
+    public float fuel;
+
+    public float GetFuel() { return fuel; }
+    public float GetMaxFuel() { return settings.maxFuel; }
+    public int GetBullets() { return bullets; }
+    public float GetRateFireTime() { return rateFireTime; }
 
     void Start()
     {
+        settings.fuelConsumptionMovement /= 100;
+        settings.fuelConsumptionRotation /= 100;
+        
+        fuel = settings.maxFuel;
         reloaded = true;
         rateFireTime = rateFire;
+        bullets = settings.initialBullets;
     }
-
     private void Update()
     {
         TryShoot();
@@ -59,10 +79,19 @@ public class Player : MonoBehaviour
             reloaded = true;
             if (Input.GetMouseButtonDown(0) && !shooting && reloaded)
             {
-                rateFireTime = 0;
-                reloaded = false;
-                shooting = true;
-                Aim();
+                if (bullets > 0)
+                {
+                    bullets--;
+                    rateFireTime = 0;
+                    reloaded = false;
+                    shooting = true;
+                    Shooted?.Invoke();
+                    Aim();
+                }
+                else
+                {
+                    // No hay Bullets
+                }
             }
         }
     }
@@ -76,26 +105,43 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(Shooting(hit.point));
         }
+        else
+        {
+            rateFireTime = rateFire;
+            reloaded = true;
+            shooting = false;
+        }
     }
     IEnumerator Shooting(Vector3 point)                         //todo: clampear la rotacion en z a 0 y de x entre 9 y -20
     {
         Transform cannonT = tank.cannon.transform;
         Quaternion rotateDestiny = Quaternion.LookRotation(point - cannonT.position, cannonT.up);
         
-        float posX = Mathf.Clamp(rotateDestiny.eulerAngles.x, -20, 9);
-        rotateDestiny = Quaternion.Euler(posX, rotateDestiny.eulerAngles.y, 0);
-        Debug.Log("Clamped: " + rotateDestiny);
+        //Debug.Log("Rotacion de Destino: " + rotateDestiny.eulerAngles);
+        rotateDestiny = FixRotateDestiny(rotateDestiny, cannonT);
 
         while (cannonT.rotation != rotateDestiny)
         {
-            cannonT.rotation = Quaternion.Euler(cannonT.eulerAngles.x, cannonT.eulerAngles.y, 0);// testear, sino sacar del while (abajo)
             rotateDestiny = Quaternion.LookRotation(point - cannonT.position, cannonT.up);
+            rotateDestiny = FixRotateDestiny(rotateDestiny, cannonT);
+
             cannonT.rotation = Quaternion.RotateTowards(cannonT.rotation, rotateDestiny, settings.rotateCannon * Time.deltaTime);
             yield return null;
         }
+        //Debug.Log("Final: " + cannonT.rotation);
         Shoot(point);
     }
+    Quaternion FixRotateDestiny(Quaternion rotateDestiny, Transform cannonT)
+    {
+        cannonT.localRotation = Quaternion.Euler(cannonT.localEulerAngles.x, cannonT.localEulerAngles.y, 0);
 
+        float posX = rotateDestiny.eulerAngles.x;
+        // Fix posX
+
+        rotateDestiny = Quaternion.Euler(posX, rotateDestiny.eulerAngles.y, cannonT.rotation.eulerAngles.z);
+        //Debug.Log("Rotacion Fixed: " + rotateDestiny.eulerAngles);
+        return rotateDestiny;
+    }
     void Shoot(Vector3 point)
     {
         shooting = false;
@@ -104,26 +150,31 @@ public class Player : MonoBehaviour
             bulletGroup = GameObject.Find("BulletGroup_Ref").transform;
             Debug.LogWarning("bulletGroup no estaba asignado", gameObject);
         }
+
         GameObject bullet = Instantiate(tank.PfBullet, tank.firePoint.transform.position, tank.cannon.transform.rotation, bulletGroup);
         Vector3 direction = point - bullet.transform.position;
         bullet.GetComponent<Rigidbody>().AddForce(direction.normalized * settings.bulletForce, ForceMode.Impulse);
+        bullet.GetComponent<Bullet>().damage = settings.damageBullet;
     }
     void Movement()
     {
-        float ver = Input.GetAxisRaw("Vertical");
-        transform.Translate(Vector3.forward * (settings.speedTankMovement * ver));
-        transform.Translate(Vector3.forward * (-settings.speedTankMovement / 2 * ver));
+        if (fuel > 0)
+        {
+            float ver = Input.GetAxisRaw("Vertical");
+            float multiply = (ver > 0) ? 1 : 2;
+
+            transform.Translate(Vector3.forward * ((settings.speedTankMovement / multiply) * ver));
+            fuel -= Mathf.Abs(ver * (settings.fuelConsumptionMovement / multiply));
+        }
     }
     void Rotation()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (fuel > 0)
         {
-            transform.Rotate(Vector3.up, -settings.rotateTank);
-        }
+            float hor = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Rotate(Vector3.up, settings.rotateTank);
+            transform.Rotate(Vector3.up, settings.rotateTank * hor);
+            fuel -= Mathf.Abs(hor * settings.fuelConsumptionRotation);
         }
     }
     void AutoRotation()
@@ -141,5 +192,14 @@ public class Player : MonoBehaviour
         Vector3 newpos = transform.position;
         newpos.y = Terrain.activeTerrain.SampleHeight(transform.position) + tankSeparateTerrain;
         transform.position = newpos;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        settings.life -= damage;
+        if (settings.life <= 0)
+        {
+            // Evento Morir.
+        }
     }
 }
