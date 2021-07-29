@@ -12,10 +12,12 @@ public class UiManagerGame : MonoBehaviour
         public TextMeshProUGUI score;
         public TextMeshProUGUI timer;
         public TextMeshProUGUI distance;
+        public TextMeshProUGUI moreBullets;
         public Image bulletRecharge;
         public Slider fuel;
         public Image[] bullets;
         public Image clockFull;
+        public Image tankLife;
     }
     [SerializeField] private ObjectsUI ui;
 
@@ -44,6 +46,7 @@ public class UiManagerGame : MonoBehaviour
     
     void Start()
     {
+        canvasGroup[(int) CanvasGroups.GameOver].GetComponent<Image>().color = player.life > 0 ? GameOverWinColor : GameOverLoseColor;
         GameManager.Get().updateScore += UpdateScore;
         foreach (CanvasGroup canvas in canvasGroup)
         {
@@ -56,12 +59,19 @@ public class UiManagerGame : MonoBehaviour
         canvasGroup[(int)CanvasGroups.Game].alpha = 1;
         player.onShooted += ShootedBullet;
         GameManager.Get().onGameOver += UpdatePanelGameOver;
+        GameManager.Get().onGetBullet += ShootedBullet;
+        player.onReceiveDamage += UpdateTankLife;
     }
     void Update()
     {
         UpdateTime();
         UpdateFuel();
         UpdateDistance();
+    }
+    public void UpdateFuel()
+    {   // Se llama en el update porque llamar a un evento frame por frame mientras se mantenga apretada las teclas WASD me parece demasiado.
+        ui.fuel.value = player.GetFuel() / player.GetMaxFuel();
+        //Debug.Log(player.GetFuel() / player.GetMaxFuel());
     }
     public void UpdateScore()
     {
@@ -75,24 +85,22 @@ public class UiManagerGame : MonoBehaviour
         ui.clockFull.fillAmount = onTime / maxTime;
         //Debug.Log(onTime / maxTime);
     }
-    public void UpdateFuel()
-    {   // Se llama en el update porque llamar a un evento frame por frame mientras se mantenga apretada las teclas WASD me parece demasiado.
-        ui.fuel.value = player.GetFuel() / player.GetMaxFuel();
-        //Debug.Log(player.GetFuel() / player.GetMaxFuel());
-    }
     public void UpdateDistance()
     {
-        ui.distance.text = player.distance.ToString("F0");
+        ui.distance.text = "Distance: " + player.distance.ToString("F0");
+    }
+    void UpdateTankLife()
+    {
+        ui.tankLife.fillAmount = player.life / player.GetMaxLife();
     }
     public void ShootedBullet()
     {
         int bullets = player.GetBullets();
-
         for (int i = 0; i < ui.bullets.Length; i++)
         {
             ui.bullets[i].gameObject.SetActive(i < bullets);
         }
-
+        ui.moreBullets.text = (bullets > ui.bullets.Length) ? "+ " + (bullets - ui.bullets.Length) : "";
         StartCoroutine(Reloading());
     }
     IEnumerator Reloading()

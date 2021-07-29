@@ -4,30 +4,36 @@ public class Bullet : MonoBehaviour
 {
     public LayerMask layersImpacts;
     public int damage;
+    private bool impact;
 
     void Start()
     {
-        
+
     }
+
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (ConstantsFunctions.LayerEquals(layersImpacts, other.gameObject.layer))
+        if (!impact)
         {
-            Debug.Log("La bala choca contra: "+ other.gameObject.name);
-            Destroy(gameObject);
-            IDamageable objetive = other.gameObject.GetComponent<IDamageable>();
+            impact = true;
+            if (ConstantsFunctions.LayerEquals(layersImpacts, other.gameObject.layer))
+            {
+                Debug.Log("La bala choca contra: " + other.gameObject.name);
+                Destroy(gameObject);
+                IDamageable objetive = other.gameObject.GetComponent<IDamageable>();
 
-            if (objetive == null) return;
-            objetive.TakeDamage(damage);
+                if (objetive == null) return;
+                objetive.TakeDamage(damage);
 
-            //ObjectsRewards rewards = other.gameObject.GetComponent<ObjectsRewards>();
-            //if (rewards == null) return;
-            
+                //ObjectsRewards rewards = other.gameObject.GetComponent<ObjectsRewards>();
+                //if (rewards == null) return;
+
+            }
         }
     }
 }

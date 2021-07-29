@@ -7,6 +7,7 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
     public Action onShooted;
     public Action onReloaded;
     public Action onDie;
+    public Action onReceiveDamage;
     public Transform bulletGroup;
     [Serializable] public class Tank
     {
@@ -48,6 +49,7 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
     public float GetMaxFuel() { return settings.maxFuel; }
     public int GetBullets() { return bullets; }
     public float GetRateFireTime() { return rateFireTime; }
+    public float GetMaxLife() { return settings.maxLife; }
 
     void Start()
     {
@@ -79,7 +81,7 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
         {
             if (!reloaded)
             {
-                // Evento recargado
+                // todo: Evento recargado
             }
             reloaded = true;
             if (Input.GetMouseButtonDown(0) && !shooting && reloaded)
@@ -95,7 +97,7 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
                 }
                 else
                 {
-                    // No hay Bullets
+                    // todo: No hay Bullets
                 }
             }
         }
@@ -208,6 +210,10 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
         {
             life = 0;
             onDie?.Invoke();
+        }
+        else
+        {
+            onReceiveDamage?.Invoke();
         }
     }
 

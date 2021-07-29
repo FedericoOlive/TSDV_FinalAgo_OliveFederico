@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
 {
     public Action updateScore;
     public Action onGameOver;
+    public Action onGetBullet;
     public enum RewardsType
     {
         LootBox,
@@ -78,24 +79,43 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
             onGameOver?.Invoke();
         }
     }
-    void AddReward(int reward, RewardsType type)
+    void AddReward(int reward, RewardsType type, bool bullet)
     {
-        score += reward;
-        switch (type)
+        if (bullet)
         {
-            case RewardsType.Barrel:
-                barrelsDestroyed++;
-                break;
-            case RewardsType.LootBox:
-                boxesDestroyed++;
-                break;
-            default:
-                Debug.LogWarning("RewardType excede el límite.");
-                break;
+            score += reward;
+            switch (type)
+            {
+                case RewardsType.Barrel:
+                    barrelsDestroyed++;
+                    break;
+                case RewardsType.LootBox:
+                    boxesDestroyed++;
+                    break;
+                default:
+                    Debug.LogWarning("RewardType excede el límite.");
+                    break;
+            }
+
+            updateScore?.Invoke();
         }
-        updateScore?.Invoke();
+        else
+        {
+            switch (type)
+            {
+                case RewardsType.Barrel:
+                    barrelsDestroyed++;
+                    break;
+                case RewardsType.LootBox:
+                    boxesDestroyed++;
+                    onGetBullet?.Invoke();
+                    break;
+                default:
+                    Debug.LogWarning("RewardType excede el límite.");
+                    break;
+            }
+        }
     }
-    
     Vector3 SetHeight(GameObject go, float offset)
     {
         Vector3 pos = go.transform.position;
