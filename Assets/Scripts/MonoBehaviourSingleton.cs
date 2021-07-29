@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-
 public class MonoBehaviourSingleton<T> : MonoBehaviour where T : Component
 {
     private static T instance;

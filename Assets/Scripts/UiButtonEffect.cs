@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
-
 public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private float scaleMultiply = 3;

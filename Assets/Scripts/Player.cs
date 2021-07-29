@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections;
-
 public class Player : MonoBehaviour, IDamageable, IRechargeFuel
 {
     public Action onShooted;

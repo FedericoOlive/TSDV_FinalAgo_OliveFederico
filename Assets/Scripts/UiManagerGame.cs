@@ -36,8 +36,8 @@ public class UiManagerGame : MonoBehaviour
 
     public Player player;
     public CanvasGroup[] canvasGroup;
-    public Color GameOverLoseColor;
-    public Color GameOverWinColor;
+    public Color gameOverLoseColor;
+    public Color gameOverWinColor;
     enum CanvasGroups{ Game, Pause, GameOver }
     private CanvasGroups actualCanvasGroups = CanvasGroups.Game;    // off
     private CanvasGroups nextCanvasGroups = CanvasGroups.Game;      // on
@@ -144,7 +144,7 @@ public class UiManagerGame : MonoBehaviour
     }
     public void UpdatePanelGameOver()
     {
-        canvasGroup[(int) CanvasGroups.GameOver].GetComponent<Image>().color = player.life > 0 ? GameOverWinColor : GameOverLoseColor;
+        canvasGroup[(int) CanvasGroups.GameOver].GetComponent<Image>().color = player.life > 0 ? gameOverWinColor : gameOverLoseColor;
         SwitchPanel((int) CanvasGroups.GameOver);
         float life = player.life;
         uiGameOver.title.text = life > 0 ? "Time Over" : "Game Over";

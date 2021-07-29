@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -3102,8 +3102,8 @@ MonoBehaviour:
   - {fileID: 1598548483}
   - {fileID: 1161797934}
   - {fileID: 1737969768}
-  GameOverLoseColor: {r: 0.78431374, g: 0.23529412, b: 0.23529412, a: 0.6666667}
-  GameOverWinColor: {r: 0.23529412, g: 0.78431374, b: 0.23529412, a: 0.6666667}
+  gameOverLoseColor: {r: 0.78431374, g: 0.23529412, b: 0.23529412, a: 0.6666667}
+  gameOverWinColor: {r: 0.23529412, g: 0.78431374, b: 0.23529412, a: 0.6666667}
 --- !u!114 &1105529864 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7881177038075507858, guid: f88202546b8083d44bdf459592ff9a9f,

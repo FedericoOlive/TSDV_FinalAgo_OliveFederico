@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-
 public class EnemyTurret : MonoBehaviour, IDamageable
 {
     public Action onDie;

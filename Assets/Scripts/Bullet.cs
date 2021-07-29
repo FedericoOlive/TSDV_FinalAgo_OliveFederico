@@ -1,21 +1,10 @@
 ﻿using UnityEngine;
-
 public class Bullet : MonoBehaviour
 {
     public LayerMask layersImpacts;
     public int damage;
     private bool impact;
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
-
+    
     private void OnCollisionEnter(Collision other)
     {
         if (!impact)
