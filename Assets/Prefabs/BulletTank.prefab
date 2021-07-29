@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4182209909499035846}
   - component: {fileID: 1104376930855491079}
   - component: {fileID: 4608850388355864719}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: 9mm_Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: -1248731895631771527}
   - component: {fileID: 4856623795873466620}
   - component: {fileID: 1426812392350605865}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BulletTank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 474429579579102385}
   - component: {fileID: 3460430139227958031}
   - component: {fileID: 3157872851365115678}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: 9mm_Shell
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &220767675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 220767676}
+  m_Layer: 10
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &220767676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220767675}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 0, y: 2.2500014, z: 7.7899995}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 220191856535325118}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &188085879031159180
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +137,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 220191857280150683}
+  - {fileID: 220767676}
   m_Father: {fileID: 5127619427291682085}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: -90}
@@ -1556,7 +1587,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5127619427291682085}
-  - component: {fileID: 990887433}
   - component: {fileID: 8096694519891996590}
   m_Layer: 10
   m_Name: EnemyTurret
@@ -1581,21 +1611,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &990887433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5504285084996112287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e03be4075a228344cb5fdbdd01bcd5bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  rewardScore: 200
-  life: 100
 --- !u!114 &8096694519891996590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1608,7 +1623,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ce7faa844b9764fb28ce724b706f8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goAim: {fileID: 0}
+  damageableLayerMask:
+    serializedVersion: 2
+    m_Bits: 2048
+  bulletGroup: {fileID: 0}
+  turret:
+    turret: {fileID: 220191856535325105}
+    PfBullet: {fileID: 6394796077085500910, guid: 1d9d443b0be991c4ba1f54066b2b117d,
+      type: 3}
+    firePoint: {fileID: 220767675}
+    goAim: {fileID: 0}
+  settings:
+    maxLife: 200
+    bulletForce: 30
+    damageBullet: 20
+    rateFire: 2
+  life: 0
 --- !u!1 &5550666909692729994
 GameObject:
   m_ObjectHideFlags: 0
