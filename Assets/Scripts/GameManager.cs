@@ -5,6 +5,7 @@ using Random = UnityEngine.Random;
 public class GameManager : MonoBehaviourSingleton<GameManager>
 {
     public Action updateScore;
+    public Action onGameOver;
     public enum RewardsType
     {
         LootBox,
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     [Serializable]
     public class Objects
     {
+        public Player player;
         public GameObject pfBarrel;
         public GameObject pfLootBox;
         public GameObject spawnBarrel;
@@ -28,11 +30,12 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     public int initialBoxes = 10;
     public int initialBarrel = 10;
     public int initialBullets = 10;
-    public int remainingBoxes = 10;
-    public int remainingBarrel = 10;
+    public int boxesDestroyed;
+    public int barrelsDestroyed;
     public float maxGameTime = 120;
     public float gameTime;
     public int score;
+    private bool gameOver;
 
     void Start()
     {
@@ -53,27 +56,52 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
             boxes.transform.rotation = SetInclination(boxes.transform);
             boxes.transform.position = SetHeight(boxes, LootBoxOffset);
             boxes.GetComponent<ObjectsRewards>().giveReward += AddReward;
+            objects.player.onDie += GameOver;
         }
     }
-
     void Update()
     {
         gameTime += Time.deltaTime;
+        
+        //Invoke(nameof(GameOver), maxGameTime);        Diferencias?
+        if (gameTime > maxGameTime)
+        {
+            GameOver();
+        }
     }
-
-    void AddReward(int reward)
+    void GameOver()
+    {
+        if (!gameOver)
+        {
+            Time.timeScale = 0;
+            gameOver = true;
+            onGameOver?.Invoke();
+        }
+    }
+    void AddReward(int reward, RewardsType type)
     {
         score += reward;
+        switch (type)
+        {
+            case RewardsType.Barrel:
+                barrelsDestroyed++;
+                break;
+            case RewardsType.LootBox:
+                boxesDestroyed++;
+                break;
+            default:
+                Debug.LogWarning("RewardType excede el límite.");
+                break;
+        }
         updateScore?.Invoke();
     }
-
+    
     Vector3 SetHeight(GameObject go, float offset)
     {
         Vector3 pos = go.transform.position;
         pos.y = Terrain.activeTerrain.SampleHeight(pos) + offset;
         return pos;
     }
-
     Vector3 RandomPosition(Bounds bounds)
     {
         return new Vector3(
@@ -82,7 +110,6 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
             Random.Range(bounds.min.z, bounds.max.z)
         );
     }
-
     Quaternion SetInclination(Transform transform)
     {
         RaycastHit hit;

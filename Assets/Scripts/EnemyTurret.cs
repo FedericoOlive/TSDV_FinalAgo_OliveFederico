@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyTurret : MonoBehaviour, IDamageable
 {
-    public Action OnDie;
+    public Action onDie;
     public LayerMask damageableLayerMask;
     public Transform bulletGroup;
     [Serializable] public class Turret

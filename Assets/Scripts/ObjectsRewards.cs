@@ -4,7 +4,7 @@ using UnityEngine;
 public class ObjectsRewards : MonoBehaviour, IDamageable
 {
     public GameManager.RewardsType type;
-    public Action<int> giveReward;
+    public Action<int, GameManager.RewardsType> giveReward;
     public int rewardScore;
     public int life;
 
@@ -26,7 +26,7 @@ public class ObjectsRewards : MonoBehaviour, IDamageable
                     break;
             }
             life = 0;
-            giveReward?.Invoke(rewardScore);
+            giveReward?.Invoke(rewardScore, type);
             Destroy(gameObject);
         }
     }

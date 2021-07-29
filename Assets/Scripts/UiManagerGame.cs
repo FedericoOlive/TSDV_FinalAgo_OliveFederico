@@ -11,12 +11,26 @@ public class UiManagerGame : MonoBehaviour
     {
         public TextMeshProUGUI score;
         public TextMeshProUGUI timer;
+        public TextMeshProUGUI distance;
         public Image bulletRecharge;
         public Slider fuel;
         public Image[] bullets;
         public Image clockFull;
     }
     [SerializeField] private ObjectsUI ui;
+
+    [Serializable]
+    public class ObjectsUIGameOver
+    {
+        public TextMeshProUGUI title;
+        public TextMeshProUGUI life;
+        public TextMeshProUGUI score;
+        public TextMeshProUGUI distance;
+        public TextMeshProUGUI bulletsShooted;
+        public TextMeshProUGUI boxesDestroyed;
+        public TextMeshProUGUI barrelsDestroyed;
+    }
+    [SerializeField] private ObjectsUIGameOver uiGameOver;
 
     public Player player;
     public CanvasGroup[] canvasGroup;
@@ -40,12 +54,14 @@ public class UiManagerGame : MonoBehaviour
         canvasGroup[(int) CanvasGroups.Game].interactable = true;
         canvasGroup[(int) CanvasGroups.Game].blocksRaycasts = true;
         canvasGroup[(int)CanvasGroups.Game].alpha = 1;
-        player.OnShooted += ShootedBullet;
+        player.onShooted += ShootedBullet;
+        GameManager.Get().onGameOver += UpdatePanelGameOver;
     }
     void Update()
     {
         UpdateTime();
         UpdateFuel();
+        UpdateDistance();
     }
     public void UpdateScore()
     {
@@ -60,9 +76,13 @@ public class UiManagerGame : MonoBehaviour
         //Debug.Log(onTime / maxTime);
     }
     public void UpdateFuel()
-    {   // Se llama en el update porque llamar a un evento to.do el tiempo mientras se mantenga apretada la tecla me parece demasiado.
+    {   // Se llama en el update porque llamar a un evento frame por frame mientras se mantenga apretada las teclas WASD me parece demasiado.
         ui.fuel.value = player.GetFuel() / player.GetMaxFuel();
         //Debug.Log(player.GetFuel() / player.GetMaxFuel());
+    }
+    public void UpdateDistance()
+    {
+        ui.distance.text = player.distance.ToString("F0");
     }
     public void ShootedBullet()
     {
@@ -114,8 +134,21 @@ public class UiManagerGame : MonoBehaviour
         on.interactable = true;
         onTime = 0;
     }
+    public void UpdatePanelGameOver()
+    {
+        SwitchPanel((int) CanvasGroups.GameOver);
+        float life = player.life;
+        uiGameOver.title.text = life > 0 ? "Time Over" : "Game Over";
+        uiGameOver.life.text = "Life: " + life.ToString("F0");
+        uiGameOver.score.text = "Score: " + GameManager.Get().score.ToString();
+        uiGameOver.distance.text = "Distance: " + player.distance.ToString("F0");
+        uiGameOver.bulletsShooted.text = "Bullets Shooted: " + player.bulletsShooted.ToString();
+        uiGameOver.boxesDestroyed.text = "Boxes Destroyed: " + GameManager.Get().boxesDestroyed.ToString();
+        uiGameOver.barrelsDestroyed.text = "Barrels Destroyed: " + GameManager.Get().barrelsDestroyed.ToString();
+    }
     public void GoToScene(string scene)
     {
+        Destroy(GameManager.Get().gameObject);
         Time.timeScale = 1;
         SceneManager.LoadScene(scene);
     }

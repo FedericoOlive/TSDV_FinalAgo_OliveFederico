@@ -20,12 +20,14 @@ public class Bullet : MonoBehaviour
         {
             Debug.Log("La bala choca contra: "+ other.gameObject.name);
             Destroy(gameObject);
-
             IDamageable objetive = other.gameObject.GetComponent<IDamageable>();
 
             if (objetive == null) return;
-
             objetive.TakeDamage(damage);
+
+            //ObjectsRewards rewards = other.gameObject.GetComponent<ObjectsRewards>();
+            //if (rewards == null) return;
+            
         }
     }
 }

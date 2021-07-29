@@ -4,9 +4,9 @@ using System.Collections;
 
 public class Player : MonoBehaviour, IDamageable, IRechargeFuel
 {
-    public Action OnShooted;
-    public Action OnReloaded;
-    public Action OnDie;
+    public Action onShooted;
+    public Action onReloaded;
+    public Action onDie;
     public Transform bulletGroup;
     [Serializable] public class Tank
     {
@@ -17,7 +17,7 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
     }
     [Serializable] public class Settings
     {
-        public int life = 100;
+        public int maxLife = 100;
         public float speedTankMovement;
         public float rotateTank;
         public float gravityTankRotate;
@@ -40,6 +40,9 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
     private bool reloaded;
     private int bullets;
     public float fuel;
+    public float distance;
+    public int life = 100;
+    public int bulletsShooted;
 
     public float GetFuel() { return fuel; }
     public float GetMaxFuel() { return settings.maxFuel; }
@@ -55,6 +58,7 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
         reloaded = true;
         rateFireTime = rateFire;
         bullets = settings.initialBullets;
+        life = settings.maxLife;
     }
     private void Update()
     {
@@ -86,7 +90,7 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
                     rateFireTime = 0;
                     reloaded = false;
                     shooting = true;
-                    OnShooted?.Invoke();
+                    onShooted?.Invoke();
                     Aim();
                 }
                 else
@@ -152,6 +156,7 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
             Debug.LogWarning("bulletGroup no estaba asignado", gameObject);
         }
 
+        bulletsShooted++;
         GameObject bullet = Instantiate(tank.PfBullet, tank.firePoint.transform.position, tank.cannon.transform.rotation, bulletGroup);
         Vector3 direction = point - bullet.transform.position;
         bullet.GetComponent<Rigidbody>().AddForce(direction.normalized * settings.bulletForce, ForceMode.Impulse);
@@ -163,6 +168,8 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
         {
             float ver = Input.GetAxisRaw("Vertical");
             float multiply = (ver > 0) ? 1 : 2;
+
+            distance += Mathf.Abs(ver) / multiply;
 
             transform.Translate(Vector3.forward * ((settings.speedTankMovement / multiply) * ver));
             fuel -= Mathf.Abs(ver * (settings.fuelConsumptionMovement / multiply));
@@ -196,11 +203,11 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
     }
     public void TakeDamage(int damage)
     {
-        settings.life -= damage;
-        if (settings.life <= 0)
+        life -= damage;
+        if (life <= 0)
         {
-            OnDie?.Invoke();
-            // todo Evento Morir.
+            life = 0;
+            onDie?.Invoke();
         }
     }
 

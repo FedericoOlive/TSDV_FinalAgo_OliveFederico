@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  rewardScore: 20
+  rewardScore: 10
   life: 1
 --- !u!136 &2771735125529639334
 CapsuleCollider:
