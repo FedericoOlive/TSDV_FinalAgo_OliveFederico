@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections;
+using UnityEngine.EventSystems;
+
 public class Player : MonoBehaviour, IDamageable, IRechargeFuel
 {
     public Action onShooted;
@@ -31,6 +33,7 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
     }
     [SerializeField] private Tank tank;
     [SerializeField] private Settings settings;
+    public LayerMask limits;
     public LayerMask objetivesLayerMask;
     public float tankSeparateTerrain = 0.5f;
     public float rateFire;
@@ -38,6 +41,7 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
     private float rateFireTime;
     private bool shooting;
     private bool reloaded;
+    private float distanceFrontOffset = 5f;
     public int bullets;
     public float fuel;
     public float distance;
@@ -85,18 +89,21 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
             reloaded = true;
             if (Input.GetMouseButtonDown(0) && !shooting && reloaded)
             {
-                if (bullets > 0)
+                if (!EventSystem.current.IsPointerOverGameObject())
                 {
-                    bullets--;
-                    rateFireTime = 0;
-                    reloaded = false;
-                    shooting = true;
-                    onShooted?.Invoke();
-                    Aim();
-                }
-                else
-                {
-                    // todo: No hay Bullets
+                    if (bullets > 0)
+                    {
+                        bullets--;
+                        rateFireTime = 0;
+                        reloaded = false;
+                        shooting = true;
+                        onShooted?.Invoke();
+                        Aim();
+                    }
+                    else
+                    {
+                        // todo: No hay Bullets
+                    }
                 }
             }
         }
@@ -169,13 +176,18 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
     {
         if (fuel > 0)
         {
+            RaycastHit hit;
+            
             float ver = Input.GetAxisRaw("Vertical");
             float multiply = (ver > 0) ? 1 : 2;
-
             distance += Mathf.Abs(ver) / multiply;
+            Vector3 direction = ver > 0 ? transform.forward : -transform.forward;
 
-            transform.Translate(Vector3.forward * ((settings.speedTankMovement / multiply) * ver));
-            fuel -= Mathf.Abs(ver * (settings.fuelConsumptionMovement / multiply));
+            if (!Physics.Raycast(transform.position, direction, out hit, distanceFrontOffset, limits))
+            {
+                transform.Translate(Vector3.forward * ((settings.speedTankMovement / multiply) * ver));
+                fuel -= Mathf.Abs(ver * (settings.fuelConsumptionMovement / multiply));
+            }
         }
     }
     void Rotation()

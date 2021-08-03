@@ -24,11 +24,7 @@ public class EnemyTurret : MonoBehaviour, IDamageable
     [SerializeField] private Settings settings;
     private float rateFireTime;
     public int life;
-
-    void Start()
-    {
-        
-    }
+    
     void Update()
     {
         Aim();
@@ -78,6 +74,7 @@ public class EnemyTurret : MonoBehaviour, IDamageable
         Bullet bulletComponent = bullet.GetComponent<Bullet>();
         bulletComponent.damage = settings.damageBullet;
         bulletComponent.layersImpacts = damageableLayerMask;
+
     }
     public void TakeDamage(int damage)
     {
