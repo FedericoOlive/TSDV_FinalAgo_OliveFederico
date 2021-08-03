@@ -144,8 +144,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layersImpacts:
     serializedVersion: 2
-    m_Bits: 2304
+    m_Bits: 10496
   damage: 20
+  soundShoot: {fileID: 0}
 --- !u!136 &1426812392350605865
 CapsuleCollider:
   m_ObjectHideFlags: 0

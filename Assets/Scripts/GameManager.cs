@@ -55,6 +55,8 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
             boxes.GetComponent<ObjectsRewards>().giveReward += AddReward;
             objects.player.onDie += GameOver;
         }
+
+        objects.enemyTurret.onDie += AddScore;
     }
     void Update()
     {
@@ -74,6 +76,12 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
             gameOver = true;
             onGameOver?.Invoke();
         }
+    }
+
+    void AddScore(int value)
+    {
+        score += value;
+        updateScore?.Invoke();
     }
     void AddReward(int reward, RewardsObject obj, RewardType type)
     {

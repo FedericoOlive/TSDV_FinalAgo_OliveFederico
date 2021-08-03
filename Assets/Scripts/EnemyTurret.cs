@@ -2,7 +2,7 @@
 using UnityEngine;
 public class EnemyTurret : MonoBehaviour, IDamageable
 {
-    public Action onDie;
+    public Action<int> onDie;
     public LayerMask damageableLayerMask;
     public Transform bulletGroup;
     [Serializable] public class Turret
@@ -19,12 +19,18 @@ public class EnemyTurret : MonoBehaviour, IDamageable
         public float bulletForce;
         public int damageBullet;
         public float rateFire;
+        public int scoreByDie = 500;
     }
     [SerializeField] private Turret turret;
     [SerializeField] private Settings settings;
     private float rateFireTime;
     public int life;
-    
+
+    private void Start()
+    {
+        life = settings.maxLife;
+    }
+
     void Update()
     {
         Aim();
@@ -82,7 +88,8 @@ public class EnemyTurret : MonoBehaviour, IDamageable
         if (life <= 0)
         {
             life = 0;
-            return;
+            Destroy(gameObject);
+            onDie?.Invoke(settings.scoreByDie);
         }
     }
 }

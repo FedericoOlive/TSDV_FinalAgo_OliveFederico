@@ -16,6 +16,9 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
         public GameObject cannon;
         public GameObject firePoint;
         public GameObject PfBullet;
+        public AudioSource soundShoot;
+        public AudioSource soundReloaded;
+        public AudioSource soundReloading;
     }
     [Serializable] public class Settings
     {
@@ -84,27 +87,35 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
         {
             if (!reloaded)
             {
-                // todo: Evento recargado
+                if (!tank.soundReloaded.isPlaying)
+                    tank.soundReloaded.Play();
             }
             reloaded = true;
-            if (Input.GetMouseButtonDown(0) && !shooting && reloaded)
+            if (Input.GetMouseButtonDown(0))
             {
-                if (!EventSystem.current.IsPointerOverGameObject())
+                if (!shooting && reloaded)
                 {
-                    if (bullets > 0)
+                    if (!EventSystem.current.IsPointerOverGameObject())
                     {
-                        bullets--;
-                        rateFireTime = 0;
-                        reloaded = false;
-                        shooting = true;
-                        onShooted?.Invoke();
-                        Aim();
-                    }
-                    else
-                    {
-                        // todo: No hay Bullets
+                        if (bullets > 0)
+                        {
+                            bullets--;
+                            rateFireTime = 0;
+                            reloaded = false;
+                            shooting = true;
+                            onShooted?.Invoke();
+                            Aim();
+                        }
                     }
                 }
+            }
+        }
+        else if (Input.GetMouseButtonDown(0))
+        {
+            if (!EventSystem.current.IsPointerOverGameObject())
+            {
+                if (!tank.soundReloading.isPlaying)
+                    tank.soundReloading.Play();
             }
         }
     }
@@ -171,6 +182,8 @@ public class Player : MonoBehaviour, IDamageable, IRechargeFuel
         Bullet bulletComponent = bullet.GetComponent<Bullet>();
         bulletComponent.damage = settings.damageBullet;
         bulletComponent.layersImpacts = objetivesLayerMask;
+        if (!tank.soundShoot.isPlaying)
+            tank.soundShoot.Play();
     }
     void Movement()
     {
